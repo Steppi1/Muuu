@@ -3,77 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Email Simile a MUUU</title>
+    <title>Single Page Example</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f3f3f3;
             margin: 0;
             padding: 0;
+            background-color: #f3f3f3;
         }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px;
             background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
-        .header {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #000;
-            color: #fff;
+        .hero-text {
+            max-width: 50%;
         }
-        .header h1 {
+        .hero-text h1 {
+            font-size: 48px;
             margin: 0;
-            font-size: 24px;
         }
-        .content {
-            padding: 20px;
-            text-align: center;
+        .hero-text p {
+            font-size: 18px;
+            margin-top: 10px;
         }
-        .content p {
-            font-size: 16px;
-            color: #333;
-        }
-        .button {
+        .hero-text .button {
             display: inline-block;
+            margin-top: 20px;
             padding: 12px 24px;
-            background-color: #000;
-            color: #fff;
+            background-color: #007BFF;
+            color: white;
             text-decoration: none;
             border-radius: 5px;
-            margin-top: 20px;
         }
-        .footer {
+        .hero-image {
+            max-width: 40%;
+        }
+        .hero-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Yellow Section */
+        .yellow-section {
+            background-color: #FFDD57;
+            padding: 40px;
             text-align: center;
-            padding: 20px;
-            font-size: 12px;
-            color: #999;
+            font-size: 18px;
         }
+
+        /* Client Logos Section */
+        .clients-section {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: #fff;
+        }
+        .clients-section img {
+            max-width: 100px;
+            height: auto;
+        }
+
+        /* Alternating Sections */
+        .alternating-section {
+            display: flex;
+            align-items: center;
+            padding: 60px;
+            background-color: #fff;
+        }
+        .alternating-section:nth-child(even) {
+            background-color: #f9f9f9;
+            flex-direction: row-reverse;
+        }
+        .alternating-section img {
+            width: 40%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .alternating-section .content {
+            max-width: 50%;
+            padding: 20px;
+        }
+
+        /* Black Section */
+        .black-section {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 60px;
+        }
+
+        /* Grid Section */
+        .grid-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 60px;
+            background-color: #fff;
+        }
+        .grid-section img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .grid-section p {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        /* Final Yellow Section */
+        .final-yellow-section {
+            background-color: #FFDD57;
+            padding: 40px;
+            text-align: center;
+            font-size: 18px;
+        }
+
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Benvenuto su MUUU</h1>
-        </div>
-        <div class="content">
-            <p>Ciao! Grazie per esserti iscritto a MUUU.email.</p>
-            <p>Per confermare la tua iscrizione, clicca sul pulsante qui sotto.</p>
-            <a href="#" class="button">Conferma la tua email</a>
-        </div>
-        <div class="footer">
-            <p>Non rispondere a questa email. Se hai bisogno di assistenza, contattaci tramite il nostro sito web.</p>
-        </div>
-    </div>
 
-    <script>
-        // Esempio di interazione JS
-        document.querySelector('.button').addEventListener('click', function() {
-            alert('Grazie per aver confermato la tua email!');
-        });
-    </script>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Titolo Principale</h1>
+            <p>Sottotesto accattivante che introduce l'argomento.</p>
+            <a href="#" class="button">Call to Action</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://via.placeholder.com/400" alt="Placeholder Image">
+        </div>
+    </section>
+
+    <!-- Yellow Section -->
+    <section class="yellow-section">
+        <p>Questo è un testo evidenziato in una fascia gialla.</p>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="clients-section">
+        <img src="https://via.placeholder.com/100" alt="Logo Cliente">
+        <img src="https://via.placeholder.com/100" alt="Logo Cliente">
+        <img src="https://via.placeholder.com/100" alt="Logo Cliente">
+        <img src="https://via.placeholder.com/100" alt="Logo Cliente">
+    </section>
+
+    <!-- Alternating Sections -->
+    <section class="alternating-section">
+        <div class="content">
+            <h2>Titolo della Sezione</h2>
+            <p>Descrizione o contenuto di questa sezione, accanto a un'immagine.</p>
+        </div>
+        <img src="https://via.placeholder.com/400" alt="Placeholder Image">
+    </section>
+
+    <section class="alternating-section">
+        <div class="content">
+            <h2>Titolo della Sezione</h2>
+            <p>Descrizione o contenuto di questa sezione, accanto a un'immagine.</p>
+        </div>
+        <img src="https://via.placeholder.com/400" alt="Placeholder Image">
+    </section>
+
+    <section class="alternating-section">
+        <div class="content">
+            <h2>Titolo della Sezione</h2>
+            <p>Descrizione o contenuto di questa sezione, accanto a un'immagine.</p>
+        </div>
+        <img src="https://via.placeholder.com/400" alt="Placeholder Image">
+    </section>
+
+    <!-- Black Section -->
+    <section class="black-section">
+        <p>Questo è un grande blocco di testo centrato, con del placeholder che può essere sostituito con contenuti reali. Testo lungo, multilinea, centrato nel mezzo della pagina, su fondo nero con testo bianco.</p>
+    </section>
+
+    <!-- Grid Section -->
+    <section class="grid-section">
+        <div>
+            <img src="https://via.placeholder.com/300" alt="Placeholder Image">
+            <p>Testo sotto l'immagine</p>
+        </div>
+        <div>
+            <img src="https://via.placeholder.com/300" alt="Placeholder Image">
+            <p>Testo sotto l'immagine</p>
+        </div>
+        <div>
+            <img src="https://via.placeholder.com/300" alt="Placeholder Image">
+            <p>Testo sotto l'immagine</p>
+        </div>
+    </section>
+
+    <!-- Final Yellow Section -->
+    <section class="final-yellow-section">
+        <p>Testo finale in fascia gialla per chiudere la pagina.</p>
+    </section>
+
 </body>
 </html>
