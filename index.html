@@ -18,6 +18,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 60px;
+            height: 100vh; /* Occupy 100% of the viewport height */
             background-color: #fff;
         }
         .hero-text {
@@ -61,7 +62,7 @@
             display: flex;
             justify-content: space-around;
             padding: 20px;
-            background-color: #fff;
+            background-color: #333; /* Black background */
         }
         .clients-section img {
             max-width: 100px;
@@ -80,12 +81,12 @@
             flex-direction: row-reverse;
         }
         .alternating-section img {
-            width: 40%;
+            width: 20%; /* Smaller images */
             height: auto;
             border-radius: 10px;
         }
         .alternating-section .content {
-            max-width: 50%;
+            max-width: 75%;
             padding: 20px;
         }
 
@@ -105,13 +106,15 @@
             padding: 60px;
             background-color: #fff;
         }
+        .grid-section div {
+            text-align: center;
+        }
         .grid-section img {
             width: 100%;
             height: auto;
             border-radius: 10px;
         }
         .grid-section p {
-            text-align: center;
             margin-top: 10px;
             font-size: 16px;
         }
@@ -124,6 +127,19 @@
             font-size: 18px;
         }
 
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .clients-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            .grid-section {
+                grid-template-columns: 1fr; /* Single column on mobile */
+            }
+            .alternating-section img {
+                width: 40%; /* Adjust for mobile */
+            }
+        }
     </style>
 </head>
 <body>
@@ -157,25 +173,25 @@
     <section class="alternating-section">
         <div class="content">
             <h2>Titolo della Sezione</h2>
-            <p>Descrizione o contenuto di questa sezione, accanto a un'immagine.</p>
+            <p>Descrizione o contenuto di questa sezione, accanto a un'immagine. Questo testo fornisce ulteriori dettagli.</p>
         </div>
-        <img src="https://via.placeholder.com/400" alt="Placeholder Image">
+        <img src="https://via.placeholder.com/100" alt="Placeholder Image">
     </section>
 
     <section class="alternating-section">
         <div class="content">
             <h2>Titolo della Sezione</h2>
-            <p>Descrizione o contenuto di questa sezione, accanto a un'immagine.</p>
+            <p>Descrizione o contenuto di questa sezione, accanto a un'immagine. Ulteriori informazioni e spiegazioni possono essere inserite qui.</p>
         </div>
-        <img src="https://via.placeholder.com/400" alt="Placeholder Image">
+        <img src="https://via.placeholder.com/100" alt="Placeholder Image">
     </section>
 
     <section class="alternating-section">
         <div class="content">
             <h2>Titolo della Sezione</h2>
-            <p>Descrizione o contenuto di questa sezione, accanto a un'immagine.</p>
+            <p>Descrizione o contenuto di questa sezione, accanto a un'immagine. Questo testo serve a chiarire il messaggio principale.</p>
         </div>
-        <img src="https://via.placeholder.com/400" alt="Placeholder Image">
+        <img src="https://via.placeholder.com/100" alt="Placeholder Image">
     </section>
 
     <!-- Black Section -->
@@ -187,15 +203,15 @@
     <section class="grid-section">
         <div>
             <img src="https://via.placeholder.com/300" alt="Placeholder Image">
-            <p>Testo sotto l'immagine</p>
+            <p>Testo sotto l'immagine. Ulteriori dettagli e informazioni pertinenti possono essere aggiunti qui.</p>
         </div>
         <div>
             <img src="https://via.placeholder.com/300" alt="Placeholder Image">
-            <p>Testo sotto l'immagine</p>
+            <p>Testo sotto l'immagine. Ulteriori dettagli e informazioni pertinenti possono essere aggiunti qui.</p>
         </div>
         <div>
             <img src="https://via.placeholder.com/300" alt="Placeholder Image">
-            <p>Testo sotto l'immagine</p>
+            <p>Testo sotto l'immagine. Ulteriori dettagli e informazioni pertinenti possono essere aggiunti qui.</p>
         </div>
     </section>
 
