@@ -12,13 +12,20 @@
             background-color: #f3f3f3;
         }
 
+        /* Container for centering content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px; /* Adjust this value for more or less margin */
+        }
+
         /* Hero Section */
         .hero {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 60px;
-            height: 100vh; /* Occupy 100% of the viewport height */
+            height: 100vh;
             background-color: #fff;
         }
         .hero-text {
@@ -55,6 +62,7 @@
             padding: 40px;
             text-align: center;
             font-size: 18px;
+            width: 100%; /* Full width */
         }
 
         /* Client Logos Section */
@@ -62,7 +70,8 @@
             display: flex;
             justify-content: space-around;
             padding: 20px;
-            background-color: #333; /* Black background */
+            background-color: #333;
+            width: 100%; /* Full width */
         }
         .clients-section img {
             max-width: 100px;
@@ -73,15 +82,14 @@
         .alternating-section {
             display: flex;
             align-items: center;
-            padding: 60px;
-            background-color: #fff;
+            padding: 60px 0;
         }
         .alternating-section:nth-child(even) {
             background-color: #f9f9f9;
             flex-direction: row-reverse;
         }
         .alternating-section img {
-            width: 20%; /* Smaller images */
+            width: 20%;
             height: auto;
             border-radius: 10px;
         }
@@ -96,27 +104,27 @@
             color: white;
             text-align: center;
             padding: 60px;
+            width: 100%; /* Full width */
         }
 
-        /* Grid Section */
+        /* Grid Section (now stacked like alternating sections) */
         .grid-section {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            padding: 60px;
-            background-color: #fff;
+            display: flex;
+            align-items: center;
+            padding: 60px 0;
         }
-        .grid-section div {
-            text-align: center;
+        .grid-section:nth-child(even) {
+            background-color: #f9f9f9;
+            flex-direction: row-reverse;
         }
         .grid-section img {
-            width: 100%;
+            width: 20%;
             height: auto;
             border-radius: 10px;
         }
-        .grid-section p {
-            margin-top: 10px;
-            font-size: 16px;
+        .grid-section .content {
+            max-width: 75%;
+            padding: 20px;
         }
 
         /* Final Yellow Section */
@@ -125,136 +133,121 @@
             padding: 40px;
             text-align: center;
             font-size: 18px;
+            width: 100%; /* Full width */
         }
 
         /* Responsive Styles */
         @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-text {
+                max-width: 100%;
+            }
+            .hero-image {
+                max-width: 80%;
+                margin-top: 20px;
+            }
             .clients-section {
                 flex-direction: column;
                 align-items: center;
             }
-            .grid-section {
-                grid-template-columns: 1fr; /* Single column on mobile */
+            .alternating-section, .grid-section {
+                flex-direction: column;
             }
-            .alternating-section img {
+            .alternating-section img, .grid-section img {
                 width: 40%; /* Adjust for mobile */
+                margin-bottom: 20px;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-text">
-            <h1>Inviare email di qualità è facile</h1>
-            <p>🐮Muuu: Per quando vuoi raccontare la tua storia, vendere il tuo prodotto o trovare nuovi partner.</p>
-            <a href="#" class="button">Ci presentiamo</a>
-        </div>
-        <div class="hero-image">
-            <img src="https://via.placeholder.com/400" alt="Placeholder Image">
-        </div>
-    </section>
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Inviare email di qualità è facile</h1>
+                <p>🐮Muuu: Per quando vuoi raccontare la tua storia, vendere il tuo prodotto o trovare nuovi partner.</p>
+                <a href="#" class="button">Ci presentiamo</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://via.placeholder.com/400" alt="Placeholder Image">
+            </div>
+        </section>
+    </div>
 
     <!-- Yellow Section -->
     <section class="yellow-section">
         <p>🐮Muuuuuuuuuuuuu</p>
     </section>
 
-    <!-- Clients Section -->
-    <section class="clients-section">
-        <img src="https://via.placeholder.com/100" alt="Logo Cliente">
-        <img src="https://via.placeholder.com/100" alt="Logo Cliente">
-        <img src="https://via.placeholder.com/100" alt="Logo Cliente">
-        <img src="https://via.placeholder.com/100" alt="Logo Cliente">
-    </section>
+    <div class="container">
+        <!-- Clients Section -->
+        <section class="clients-section">
+            <img src="https://via.placeholder.com/100" alt="Logo Cliente">
+            <img src="https://via.placeholder.com/100" alt="Logo Cliente">
+            <img src="https://via.placeholder.com/100" alt="Logo Cliente">
+            <img src="https://via.placeholder.com/100" alt="Logo Cliente">
+        </section>
 
-    
-    <!-- Alternating Sections -->
-    <section class="alternating-section">
-        <div class="content">
-            <h2>Newsletter</h2>
-            <p>Raccontati, racconta il tuo prodotto, istruisci i tuoi lettori e lascia un'impronta.
-‍"In un mondo di urlatori, il futuro è di chi trasmette valore."</p>
-        </div>
-        <img src="https://via.placeholder.com/100" alt="Placeholder Image">
-    </section>
+        <!-- Alternating Sections -->
+        <section class="alternating-section">
+            <div class="content">
+                <h2>Newsletter</h2>
+                <p>Raccontati, racconta il tuo prodotto, istruisci i tuoi lettori e lascia un'impronta. "In un mondo di urlatori, il futuro è di chi trasmette valore."</p>
+            </div>
+            <img src="https://via.placeholder.com/100" alt="Placeholder Image">
+        </section>
 
-    
+        <section class="alternating-section">
+            <div class="content">
+                <h2>Campagne email</h2>
+                <p>Vendere non è una colpa, lo SPAM sì. Trasmetti le tue offerte in modo trasparente e non disturbare il tuo cliente. "Deve essere più facile da leggere che da ignorare."</p>
+            </div>
+            <img src="https://via.placeholder.com/100" alt="Placeholder Image">
+        </section>
 
-    <section class="alternating-section">
-        <div class="content">
-            <h2>Campagne email</h2>
-            <p>Vendere non è una colpa,
-lo SPAM sì.
-‍
-Trasmetti le tue offerte
-‍in modo trasparente e
-non disturbare il tuo cliente.
-‍
-"Deve essere più facile da leggere
-che da ignorare."
-‍</p>
-        </div>
-        <img src="https://via.placeholder.com/100" alt="Placeholder Image">
-    </section>
+        <section class="alternating-section">
+            <div class="content">
+                <h2>Email su misura</h2>
+                <p>Hai molti contatti di valore, potenziali partner. Hai anche poco tempo per scrivere email ad ognuno. 🐮Muuu lo fa per te. A mano, studiando il modo migliore possibile per centrare il punto!</p>
+            </div>
+            <img src="https://via.placeholder.com/100" alt="Placeholder Image">
+        </section>
 
-    
+        <!-- Black Section -->
+        <section class="black-section">
+            <p>Noi siamo Stefano e Radhe, un designer e un coder con una missione: Migliorare il modo in cui le aziende comunicano tramite email. Questo perché pensiamo che a nessuno piaccia ricevere SPAM. Con 10 anni di esperienza nel settore, abbiamo visto e analizzato email di ogni genere. Questo è il nostro metodo di lavoro, suddiviso in tre aree di competenza:</p>
+        </section>
 
-    <section class="alternating-section">
-        <div class="content">
-            <h2>Email su misura</h2>
-            <p>Hai molti contatti di valore, potenziali partner.
+        <!-- Grid Section (Now Stacked) -->
+        <section class="grid-section">
+            <div class="content">
+                <h2>Concept</h2>
+                <img src="https://via.placeholder.com/300" alt="Placeholder Image">
+                <p>Il buon design è invisibile, si adatta perfettamente alle nostre esigenze senza attirare attenzione su di sé.</p>
+            </div>
+        </section>
 
-Hai anche poco tempo per scrivere email ad ognuno.
+        <section class="grid-section">
+            <div class="content">
+                <h2>Contenuti</h2>
+                <img src="https://via.placeholder.com/300" alt="Placeholder Image">
+                <p>Un contenuto di alta qualità, rilevante, vale più di ogni altro aspetto quando si tratta di email. Questo è il cuore del nostro lavoro.</p>
+            </div>
+        </section>
 
-🐮Muuu lo fa per te.
-
-A mano, studiando il modo migliore possibile per centrare il punto!</p>
-        </div>
-        <img src="https://via.placeholder.com/100" alt="Placeholder Image">
-    </section>
-
-
-    
-    <!-- Black Section -->
-    <section class="black-section">
-        <p>Noi siamo Stefano e Radhe, un designer e un coder con una missione:
-Migliorare il modo in cui le aziende comunicano tramite email.
-Questo perché pensiamo che a nessuno piaccia ricevere SPAM.
-Con 10 anni di esperienza nel settore, abbiamo visto e analizzato email di ogni genere.
-Questo è il nostro metodo di lavoro, suddiviso in tre aree di competenza:</p>
-    </section>
-
-
-    
-    <!-- Grid Section -->
-    <section class="grid-section">
-        <div>
-            <img src="https://via.placeholder.com/300" alt="Placeholder Image">
-            <p>Il buon design è invisibile, si adatta perfettamente alle nostre esigenze senza attirare attenzione su di se.
-
-Utilizziamo un sistema di Logo, Colori e Forme per definire il design.
-
-Dedichiamo tutto il tempo necessario per rivedere insieme le proposte che ti faremo e correggerle fino a essere soddisfatti.</p>
-        </div>
-        <div>
-            <img src="https://via.placeholder.com/300" alt="Placeholder Image">
-            <p>Un contenuto di alta qualità, rilevante, vale più di ogni altro aspetto quando si tratta di email.
-
-Questo è il cuore del nostro lavoro, il muuutivo per cui siamo qua.
-
-Giorni di studio e brainstorming creativo insieme per portare sul piatto l'idea più fresca possibile.</p>
-        </div>
-        <div>
-            <img src="https://via.placeholder.com/300" alt="Placeholder Image">
-            <p>L'invio della prima email è solo l'inizio del lavoro.
-
-Ora è tutto ON AIR, è il momento di continuare a produrre contenuti, misurare i risultati, ascoltare i feedback ed intervenire dove necessario.
-
-Possiamo seguire il piano o uscire dagli schemi, ma sicuramente è il muuumento di FARE.</p>
-        </div>
-    </section>
+        <section class="grid-section">
+            <div class="content">
+                <h2>Continuità</h2>
+                <img src="https://via.placeholder.com/300" alt="Placeholder Image">
+                <p>L'invio della prima email è solo l'inizio. Ora è tutto ON AIR, ed è il momento di continuare a produrre contenuti.</p>
+            </div>
+        </section>
+    </div>
 
     <!-- Final Yellow Section -->
     <section class="final-yellow-section">
