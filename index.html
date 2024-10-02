@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muuu - Quelli delle email</title>
+    <title>Muuu - uelli delle email</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f3f3f3;
+            background-color: #fff; /* Mantiene lo sfondo bianco ovunque */
         }
 
         /* Container for centering content */
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px; /* Adjust this value for more or less margin */
+            padding: 0 20px;
         }
 
         /* Hero Section */
@@ -56,28 +56,6 @@
             height: auto;
         }
 
-        /* Yellow Section */
-        .yellow-section {
-            background-color: #FFDD57;
-            padding: 40px;
-            text-align: center;
-            font-size: 18px;
-            width: 100%; /* Full width */
-        }
-
-        /* Client Logos Section */
-        .clients-section {
-            display: flex;
-            justify-content: space-around;
-            padding: 20px;
-            background-color: #333;
-            width: 100%; /* Full width */
-        }
-        .clients-section img {
-            max-width: 100px;
-            height: auto;
-        }
-
         /* Alternating Sections */
         .alternating-section {
             display: flex;
@@ -85,7 +63,6 @@
             padding: 60px 0;
         }
         .alternating-section:nth-child(even) {
-            background-color: #f9f9f9;
             flex-direction: row-reverse;
         }
         .alternating-section img {
@@ -98,66 +75,17 @@
             padding: 20px;
         }
 
-        /* Black Section */
-        .black-section {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 60px;
-            width: 100%; /* Full width */
-        }
-
-        /* Grid Section (now stacked like alternating sections) */
-        .grid-section {
-            display: flex;
-            align-items: center;
-            padding: 60px 0;
-        }
-        .grid-section:nth-child(even) {
-            background-color: #f9f9f9;
-            flex-direction: row-reverse;
-        }
-        .grid-section img {
-            width: 20%;
-            height: auto;
-            border-radius: 10px;
-        }
-        .grid-section .content {
-            max-width: 75%;
-            padding: 20px;
-        }
-
-        /* Final Yellow Section */
-        .final-yellow-section {
-            background-color: #FFDD57;
-            padding: 40px;
-            text-align: center;
-            font-size: 18px;
-            width: 100%; /* Full width */
-        }
-
         /* Responsive Styles */
         @media (max-width: 768px) {
-            .hero {
+            .alternating-section {
                 flex-direction: column;
                 text-align: center;
             }
-            .hero-text {
-                max-width: 100%;
-            }
-            .hero-image {
-                max-width: 80%;
-                margin-top: 20px;
-            }
-            .clients-section {
-                flex-direction: column;
-                align-items: center;
-            }
-            .alternating-section, .grid-section {
+            .alternating-section:nth-child(even) {
                 flex-direction: column;
             }
-            .alternating-section img, .grid-section img {
-                width: 40%; /* Adjust for mobile */
+            .alternating-section img {
+                width: 40%;
                 margin-bottom: 20px;
             }
         }
@@ -177,23 +105,8 @@
                 <img src="https://via.placeholder.com/400" alt="Placeholder Image">
             </div>
         </section>
-    </div>
 
-    <!-- Yellow Section -->
-    <section class="yellow-section">
-        <p>🐮Muuuuuuuuuuuuu</p>
-    </section>
-
-    <div class="container">
-        <!-- Clients Section -->
-        <section class="clients-section">
-            <img src="https://via.placeholder.com/100" alt="Logo Cliente">
-            <img src="https://via.placeholder.com/100" alt="Logo Cliente">
-            <img src="https://via.placeholder.com/100" alt="Logo Cliente">
-            <img src="https://via.placeholder.com/100" alt="Logo Cliente">
-        </section>
-
-        <!-- Alternating Sections -->
+        <!-- Alternating Section 1 -->
         <section class="alternating-section">
             <div class="content">
                 <h2>Newsletter</h2>
@@ -218,41 +131,31 @@
             <img src="https://via.placeholder.com/100" alt="Placeholder Image">
         </section>
 
-        <!-- Black Section -->
-        <section class="black-section">
-            <p>Noi siamo Stefano e Radhe, un designer e un coder con una missione: Migliorare il modo in cui le aziende comunicano tramite email. Questo perché pensiamo che a nessuno piaccia ricevere SPAM. Con 10 anni di esperienza nel settore, abbiamo visto e analizzato email di ogni genere. Questo è il nostro metodo di lavoro, suddiviso in tre aree di competenza:</p>
-        </section>
-
-        <!-- Grid Section (Now Stacked) -->
-        <section class="grid-section">
+        <!-- Alternating Section 2 (specular to Section 1) -->
+        <section class="alternating-section">
+            <img src="https://via.placeholder.com/100" alt="Placeholder Image">
             <div class="content">
                 <h2>Concept</h2>
-                <img src="https://via.placeholder.com/300" alt="Placeholder Image">
                 <p>Il buon design è invisibile, si adatta perfettamente alle nostre esigenze senza attirare attenzione su di sé.</p>
             </div>
         </section>
 
-        <section class="grid-section">
+        <section class="alternating-section">
+            <img src="https://via.placeholder.com/100" alt="Placeholder Image">
             <div class="content">
                 <h2>Contenuti</h2>
-                <img src="https://via.placeholder.com/300" alt="Placeholder Image">
                 <p>Un contenuto di alta qualità, rilevante, vale più di ogni altro aspetto quando si tratta di email. Questo è il cuore del nostro lavoro.</p>
             </div>
         </section>
 
-        <section class="grid-section">
+        <section class="alternating-section">
+            <img src="https://via.placeholder.com/100" alt="Placeholder Image">
             <div class="content">
                 <h2>Continuità</h2>
-                <img src="https://via.placeholder.com/300" alt="Placeholder Image">
                 <p>L'invio della prima email è solo l'inizio. Ora è tutto ON AIR, ed è il momento di continuare a produrre contenuti.</p>
             </div>
         </section>
     </div>
-
-    <!-- Final Yellow Section -->
-    <section class="final-yellow-section">
-        <p>Testo finale in fascia gialla per chiudere la pagina.</p>
-    </section>
 
 </body>
 </html>
