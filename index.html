@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fff; /* Sfondo bianco ovunque tranne le bande */
+            background-color: #fff; /* Sfondo bianco */
         }
 
         /* Container for centering content */
@@ -57,14 +57,13 @@
         }
 
         /* Yellow Section */
-        .yellow-section,
-        .final-yellow-section {
+        .yellow-section {
             background-color: #FFDD57;
             padding: 40px;
             text-align: center;
             font-size: 18px;
-            width: 100vw; /* Bande gialle che sforano */
-            margin-left: calc(-50vw + 50%); /* Allinea le bande al centro sforando */
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
         }
 
         /* Client Logos Section */
@@ -72,8 +71,8 @@
             display: flex;
             justify-content: space-around;
             padding: 20px;
-            background-color: #333; /* Black background */
-            width: 100vw; /* Banda nera che sfora */
+            background-color: #333; /* Sfondo nero */
+            width: 100vw;
             margin-left: calc(-50vw + 50%);
         }
         .clients-section img {
@@ -102,6 +101,10 @@
 
         /* Responsive Styles */
         @media (max-width: 768px) {
+            .clients-section {
+                flex-direction: column;
+                align-items: center;
+            }
             .alternating-section {
                 flex-direction: column;
                 text-align: center;
@@ -130,14 +133,12 @@
                 <img src="https://via.placeholder.com/400" alt="Placeholder Image">
             </div>
         </section>
-    </div>
 
-    <!-- Yellow Section -->
-    <section class="yellow-section">
-        <p>🐮Muuuuuuuuuuuuu</p>
-    </section>
+        <!-- Yellow Section -->
+        <section class="yellow-section">
+            <p>🐮Muuuuuuuuuuuuu</p>
+        </section>
 
-    <div class="container">
         <!-- Clients Section -->
         <section class="clients-section">
             <img src="https://via.placeholder.com/100" alt="Logo Cliente">
@@ -198,7 +199,7 @@
     </div>
 
     <!-- Final Yellow Section -->
-    <section class="final-yellow-section">
+    <section class="yellow-section">
         <p>Testo finale in fascia gialla per chiudere la pagina.</p>
     </section>
 
