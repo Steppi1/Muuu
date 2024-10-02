@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fff; /* Mantiene lo sfondo bianco ovunque */
+            background-color: #fff; /* Sfondo bianco ovunque tranne le bande */
         }
 
         /* Container for centering content */
@@ -53,6 +53,31 @@
         }
         .hero-image img {
             width: 100%;
+            height: auto;
+        }
+
+        /* Yellow Section */
+        .yellow-section,
+        .final-yellow-section {
+            background-color: #FFDD57;
+            padding: 40px;
+            text-align: center;
+            font-size: 18px;
+            width: 100vw; /* Bande gialle che sforano */
+            margin-left: calc(-50vw + 50%); /* Allinea le bande al centro sforando */
+        }
+
+        /* Client Logos Section */
+        .clients-section {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: #333; /* Black background */
+            width: 100vw; /* Banda nera che sfora */
+            margin-left: calc(-50vw + 50%);
+        }
+        .clients-section img {
+            max-width: 100px;
             height: auto;
         }
 
@@ -105,6 +130,21 @@
                 <img src="https://via.placeholder.com/400" alt="Placeholder Image">
             </div>
         </section>
+    </div>
+
+    <!-- Yellow Section -->
+    <section class="yellow-section">
+        <p>🐮Muuuuuuuuuuuuu</p>
+    </section>
+
+    <div class="container">
+        <!-- Clients Section -->
+        <section class="clients-section">
+            <img src="https://via.placeholder.com/100" alt="Logo Cliente">
+            <img src="https://via.placeholder.com/100" alt="Logo Cliente">
+            <img src="https://via.placeholder.com/100" alt="Logo Cliente">
+            <img src="https://via.placeholder.com/100" alt="Logo Cliente">
+        </section>
 
         <!-- Alternating Section 1 -->
         <section class="alternating-section">
@@ -156,6 +196,11 @@
             </div>
         </section>
     </div>
+
+    <!-- Final Yellow Section -->
+    <section class="final-yellow-section">
+        <p>Testo finale in fascia gialla per chiudere la pagina.</p>
+    </section>
 
 </body>
 </html>
